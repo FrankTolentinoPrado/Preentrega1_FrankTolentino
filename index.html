@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexvyne</title>
+    <link rel="stylesheet" href="./flexvyne.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Tienda en línea Flexvyne</h1>
+    <h2>Productos disponibles:</h2>
+
+    <div id="productos">
+        <div>
+            <div class="product"><img class="product" src="./img/piplup.jpeg" alt="piplup"></div>
+            <span>Funkpop 1 - S/.65</span>
+            <button onclick="agregarProducto(65)">Agregar al carrito</button>
+        </div>
+        <div>
+            <div class="product"><img class="product" src="./img/mushi.webp" alt="mushi"></div>
+            <span>Funkpop 2 - S/.56</span>
+            <button onclick="agregarProducto(56)">Agregar al carrito</button>
+        </div>
+        <div>
+            <div class="product"><img class="product" src="./img/oshawott.webp" alt="oshawott"></div>
+            <span>Funkpop 3 - S/.84</span>
+            <button onclick="agregarProducto(84)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <h2>Carrito de compras:</h2>
+    <div id="carrito">
+        <ul id="lista-carrito">
+        </ul>
+        <div class="totalito">
+        <p>Total: $<span id="total">0</span></p>
+        </div>
+    </div>
+
+    <script src="./carrito.js"></script>
+
+</body>
+</html>
