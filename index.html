@@ -5,40 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexvyne</title>
     <link rel="stylesheet" href="./flexvyne.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
 </head>
 <body>
+    <main class="main">
     <h1>Tienda en línea Flexvyne</h1>
     <h2>Productos disponibles:</h2>
 
     <div id="productos">
-        <div>
-            <div class="product"><img class="product" src="./img/piplup.jpeg" alt="piplup"></div>
-            <span>Funkpop 1 - S/.65</span>
-            <button onclick="agregarProducto(65)">Agregar al carrito</button>
-        </div>
-        <div>
-            <div class="product"><img class="product" src="./img/mushi.webp" alt="mushi"></div>
-            <span>Funkpop 2 - S/.56</span>
-            <button onclick="agregarProducto(56)">Agregar al carrito</button>
-        </div>
-        <div>
-            <div class="product"><img class="product" src="./img/oshawott.webp" alt="oshawott"></div>
-            <span>Funkpop 3 - S/.84</span>
-            <button onclick="agregarProducto(84)">Agregar al carrito</button>
-        </div>
     </div>
 
-    <h2>Carrito de compras:</h2>
+    <h2 class="carrito-titulo">Carrito de compras</h2>
     <div id="carrito">
+        <h2 class="historial-titulo">Historial de compras y productos</h2>
         <ul id="lista-carrito">
         </ul>
         <div class="totalito">
         <p>Total: $<span id="total">0</span></p>
         </div>
     </div>
+    </main>
 
-    <script src="./carrito.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+        <h3>Flexvyne Web</h3>
+        <p>
+            Bienvenidos a todos los fans del anime y coleccionistas. Soy Frank Piero Tolentino Prado, dueño de Flexvyne Web. Aquí podras encontrar: peluches, ropa y figuras de anime, además de Funkos. Te invito a explorar nuestra tienda y unirte a la familia Flexvyne Web. Juntos, creamos momentos especiales mientras alimentamos nuestra pasión por el anime y más.</p>
+
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        <div class="footer-bottom">
+            <p>copyrigth &copy;2023 Flexvyne. designed by Frank Tolentino Prado <span></span></p>
+        </div>
+    </footer>  
+
+        <script src="./carrito.js"></script>
 
 </body>
 </html>
