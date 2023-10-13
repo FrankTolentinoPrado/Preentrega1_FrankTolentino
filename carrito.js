@@ -1,13 +1,33 @@
 let productos = [
     { nombre: 'Funkpop 1', precio: 65, imagen: './img/piplup.jpeg' },
     { nombre: 'Funkpop 2', precio: 56, imagen: './img/mushi.webp' },
-    { nombre: 'Funkpop 3', precio: 84, imagen: './img/oshawott.webp'},
-    { nombre: 'Funkpop 4', precio: 75, imagen: './img/arcanine.jpg'}, 
-    { nombre: 'Funkpop 5', precio: 90, imagen: './img/lucas.webp'}
+    { nombre: 'Funkpop 3', precio: 84, imagen: './img/oshawott.webp' },
+    { nombre: 'Funkpop 4', precio: 75, imagen: './img/arcanine.jpg' },
+    { nombre: 'Funkpop 5', precio: 90, imagen: './img/lucas.webp' }
 ];
 
 let carrito = [];
 let total = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+    cargarCarritoDesdeLocalStorage();
+    actualizarCarrito();
+});
+
+function guardarCarritoEnLocalStorage() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("total", total);
+}
+
+function cargarCarritoDesdeLocalStorage() {
+    const carritoGuardado = localStorage.getItem("carrito");
+    const totalGuardado = localStorage.getItem("total");
+
+    if (carritoGuardado && totalGuardado) {
+        carrito = JSON.parse(carritoGuardado);
+        total = parseFloat(totalGuardado);
+    }
+}
 
 function agregarProducto(index, cantidad) {
     if (cantidad !== null && cantidad !== "") {
@@ -19,11 +39,20 @@ function agregarProducto(index, cantidad) {
             carrito.push({ producto, cantidad: cantidadNumerica, subtotal });
             total += subtotal;
 
+            guardarCarritoEnLocalStorage();
             actualizarCarrito();
         } else {
             alert('Ingrese una cantidad válida');
         }
     }
+}
+
+function eliminarProducto(index) {
+    const productoEliminado = carrito.splice(index, 1)[0];
+    total -= productoEliminado.subtotal;
+
+    guardarCarritoEnLocalStorage();
+    actualizarCarrito();
 }
 
 function actualizarCarrito() {
@@ -35,27 +64,35 @@ function actualizarCarrito() {
     carrito.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = `${item.producto.nombre} - Cantidad: ${item.cantidad} - Subtotal: $${item.subtotal.toFixed(2)}`;
+        
+        const eliminarButton = document.createElement('button');
+        eliminarButton.textContent = "Eliminar";
+        eliminarButton.addEventListener("click", () => {
+            eliminarProducto(index);
+        });
+
+        li.appendChild(eliminarButton);
         listaCarrito.appendChild(li);
     });
 
     totalSpan.textContent = total.toFixed(2);
 }
 
-function buscarProducto(nombre) {
-    return productos.find(producto => producto.nombre.toLowerCase() === nombre.toLowerCase());
-}
-
-function filtrarProductos(precioMaximo) {
-    return productos.filter(producto => producto.precio <= precioMaximo);
-}
-
-
 for (let i = 0; i < productos.length; i++) {
     const div = document.createElement('div');
     div.innerHTML = `
         <div class="product"><img class="product" src="${productos[i].imagen}" alt="${productos[i].nombre}"></div>
         <span>${productos[i].nombre} - S/.${productos[i].precio}</span>
-        <button onclick="agregarProducto(${i}, prompt('Ingrese la cantidad:'))">Agregar al carrito</button>
+        <button class="agregar-button" data-index="${i}">Agregar al carrito</button>
     `;
     document.getElementById('productos').appendChild(div);
 }
+
+const agregarButtons = document.querySelectorAll(".agregar-button");
+agregarButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const index = button.getAttribute("data-index");
+        const cantidad = prompt('Ingrese la cantidad:');
+        agregarProducto(index, cantidad);
+    });
+});
