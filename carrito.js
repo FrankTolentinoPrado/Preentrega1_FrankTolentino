@@ -30,20 +30,16 @@ function cargarCarritoDesdeLocalStorage() {
 }
 
 function agregarProducto(index, cantidad) {
-    if (cantidad !== null && cantidad !== "") {
-        const cantidadNumerica = parseInt(cantidad);
+    if (cantidad > 0) {
+        const producto = productos[index];
+        const subtotal = producto.precio * cantidad;
+        carrito.push({ producto, cantidad, subtotal });
+        total += subtotal;
 
-        if (!isNaN(cantidadNumerica) && cantidadNumerica > 0) {
-            const producto = productos[index];
-            const subtotal = producto.precio * cantidadNumerica;
-            carrito.push({ producto, cantidad: cantidadNumerica, subtotal });
-            total += subtotal;
-
-            guardarCarritoEnLocalStorage();
-            actualizarCarrito();
-        } else {
-            alert('Ingrese una cantidad válida');
-        }
+        guardarCarritoEnLocalStorage();
+        actualizarCarrito();
+    } else {
+        alert('Ingrese una cantidad válida');
     }
 }
 
@@ -83,6 +79,9 @@ for (let i = 0; i < productos.length; i++) {
     div.innerHTML = `
         <div class="product"><img class="product" src="${productos[i].imagen}" alt="${productos[i].nombre}"></div>
         <span>${productos[i].nombre} - S/.${productos[i].precio}</span>
+        <div>
+        <input type="number" min="1" value="1" id="cantidad-${i}" />
+        </div>
         <button class="agregar-button" data-index="${i}">Agregar al carrito</button>
     `;
     document.getElementById('productos').appendChild(div);
@@ -92,7 +91,7 @@ const agregarButtons = document.querySelectorAll(".agregar-button");
 agregarButtons.forEach(button => {
     button.addEventListener("click", () => {
         const index = button.getAttribute("data-index");
-        const cantidad = prompt('Ingrese la cantidad:');
+        const cantidad = document.getElementById(`cantidad-${index}`).value;
         agregarProducto(index, cantidad);
     });
 });
