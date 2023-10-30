@@ -20,3 +20,16 @@ hacia mi gmail, con el contenido que hemos ingresado. Cave resaltar que elimine 
 deje solo uno para mostrar un mensaje de que el correo ha sido enviado
 
 **Estare modificando el proyecto constantemente, para poder agregarle el contenido a las paginas y tambien darle mas diseño**
+
+
+ 👇 👇 👇 👇 👇 MEJORAS DEL PROYECTO 👇 👇 👇 👇 👇
+
+
+********* Primera mejora realizada 30/10/2023 ***********
+mejore todo el apartado estetico y el orden del catalogo, dividiendolo en secciones y agregando boton para categorizar y ordenar
+los productos segun la categoria que hayamos elegido, para esta mejora lo que hice fue implementar una serie de botones, conectados
+a javascript, para que cumplan la funcionalidad de:
+- ordenar de mayor a menor precio.
+- ordenar de menor a mayor precio.
+- ordenar los productos mostrando los mas relevantes(un precio intermedio).
+- limpiar los filtros.
