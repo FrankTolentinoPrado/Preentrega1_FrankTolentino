@@ -1,9 +1,24 @@
 let productos = [
-    { nombre: 'Funkpop 1', precio: 65, imagen: './img/piplup.jpeg' },
-    { nombre: 'Funkpop 2', precio: 56, imagen: './img/mushi.webp' },
-    { nombre: 'Funkpop 3', precio: 84, imagen: './img/oshawott.webp' },
-    { nombre: 'Funkpop 4', precio: 75, imagen: './img/arcanine.jpg' },
-    { nombre: 'Funkpop 5', precio: 90, imagen: './img/lucas.webp' }
+    { nombre: 'Funkpop 1', precio: 65, imagen: '../img/piplup.jpeg' },
+    { nombre: 'Funkpop 2', precio: 56, imagen: '../img/mushi.webp' },
+    { nombre: 'Funkpop 3', precio: 84, imagen: '../img/oshawott.webp' },
+    { nombre: 'Funkpop 4', precio: 75, imagen: '../img/arcanine.jpg' },
+    { nombre: 'Funkpop 5', precio: 90, imagen: '../img/lucas.webp' },
+    { nombre: 'Polo 1', precio: 55, imagen: '../img/poloanime1.webp' },
+    { nombre: 'Polo 2', precio: 50, imagen: '../img/poloanime2.webp' },
+    { nombre: 'Polo 3', precio: 65, imagen: '../img/poloanime3.webp' },
+    { nombre: 'Polo 4', precio: 80, imagen: '../img/poloanime 4.webp' },
+    { nombre: 'Polo 5', precio: 50, imagen: '../img/poloanime5.webp' },
+    { nombre: 'Funkpop 1', precio: 65, imagen: '../img/coleccionable1.webp' },
+    { nombre: 'Funkpop 2', precio: 56, imagen: '../img/coleccionable2.webp' },
+    { nombre: 'Funkpop 3', precio: 84, imagen: '../img/coleccionable3.webp' },
+    { nombre: 'Funkpop 4', precio: 75, imagen: '../img/coleccionable4.webp' },
+    { nombre: 'Funkpop 5', precio: 90, imagen: '../img/coleccionable5.webp' },
+    { nombre: 'Funkpop 1', precio: 65, imagen: '../img/peluche1.jpeg' },
+    { nombre: 'Funkpop 2', precio: 56, imagen: '../img/peluche2.webp' },
+    { nombre: 'Funkpop 3', precio: 84, imagen: '../img/peluche3.webp' },
+    { nombre: 'Funkpop 4', precio: 75, imagen: '../img/peluche4.jpg' },
+    { nombre: 'Funkpop 5', precio: 90, imagen: '../img/peluche5.jpeg' }
 ];
 
 let carrito = [];

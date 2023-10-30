@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FLEXVYNE WEB</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav class="contenedor_hamburguesa">
+            <ul>
+                <li>
+                    <a href="../index.html" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="./productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="./nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="./servicios.html">Servicios</a>
+                </li>
+                <li>
+                    <a class="boton_login" href="./login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    
+    <main class="main">
+
+        <section class="sec-productos">
+
+        <h2 class="carrito-titulo">Carrito de compras</h2>
+        <div id="carrito">
+            <h2 class="historial-titulo">Historial de compras y productos</h2>
+            <ul id="lista-carrito">
+                
+            </ul>
+            <div class="totalito">
+                <p>Total: $<span id="total">0</span></p>
+            </div>
+        </div>
+
+        <h2 class="titulo-disponibles">Productos disponibles:</h2>
+
+        <div id="productos">
+        
+        </div>
+    </section>
+
+    
+    </main>
+
+    <!--Aqui comienza el footer-->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Flexvyne Web</h3>
+            <p>
+                Bienvenidos a todos los fans del anime y coleccionistas. Soy Frank Piero Tolentino Prado, dueño de Flexvyne Web. Aquí podrás encontrar: peluches, ropa y figuras de anime, además de Funkos. Te invito a explorar nuestra tienda y unirte a la familia Flexvyne Web. Juntos, creamos momentos especiales mientras alimentamos nuestra pasión por el anime y más.</p>
+
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 Flexvyne. designed by Frank Tolentino Prado <span></span></p>
+            </div>
+        </div>
+
+    </footer>
+    <!--Aqui termina el footer-->
+    <script src="../javascript/carrito.js"></script>
+</body>
+</html>

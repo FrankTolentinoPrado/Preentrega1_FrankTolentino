@@ -3,32 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexvyne</title>
-    <link rel="stylesheet" href="./flexvyne.css">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <main class="main">
-        <h1>Tienda en línea Flexvyne</h1>
-        <h2>Productos disponibles:</h2>
-
-        <div id="productos">
-        
-        </div>
-
-        <h2 class="carrito-titulo">Carrito de compras</h2>
-        <div id="carrito">
-            <h2 class="historial-titulo">Historial de compras y productos</h2>
-            <ul id="lista-carrito">
-                
+    <!--Header de la pagina-->
+    <header class="header">
+        <div class="logo">FLEXVYNE WEB</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav class="contenedor_hamburguesa">
+            <ul>
+                <li>
+                    <a href="./index.html" class="active">Inicio</a>
+                </li>
+                <li>
+                    <a href="./pages/productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="./pages/nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="./pages/servicios.html">Servicios</a>
+                </li>
+                <li>
+                    <a class="boton_login" href="./pages/login.html">Login</a>
+                </li>
             </ul>
-            <div class="totalito">
-                <p>Total: $<span id="total">0</span></p>
-            </div>
-        </div>
-    </main>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <!--Aqui termina el header-->
 
+    <!--Aqui comienza el main y contenido de la pagina-->
+    <main class="main">
+        <section class="nosotros">
+            <div class="nosotros-img">
+                <img src="./img/img-nosotros.jpg" alt="charizard">
+            </div>
+    
+            <div class="nosotros-txt">
+                <span class="intro"> Introducción sobre nosotros</span>
+                <h2>Nosotros <span>Vendemos los mejores producto</span>
+                    tu informacion 
+                </h2>
+                <p>
+                    Flexvyne es una tienda apasionada por la cultura asiatica que se encuentra en Perú la cual ofrece una amplia gama de productos únicos, desde adorables peluches y codiciadas figuras coleccionables, hasta moda inspirada en la cultura japonesa y Funko Pops. Nos enorgullece ser amantes de la cultura asiática y compartimos esa pasión en cada producto que ofrecemos. ¡Bienvenido a Flexvyne, donde encontrarás algo especial para cada apasionado coleccionista y amante de la cultura!"
+                </p>
+                <a href="./pages/nosotros.html" class="btn-nosotros">Mas información</a>
+            </div>
+        </section>
+
+        <section class="sec2">
+            <h2 class="subtitulo-sec2">INFORMACION ADICIONAL PARA NUESTROS CLIENTES</h2>
+            <div class="container-sec2">
+                <div class="div-sec2">
+                <article class="article-sec2">
+    
+                    <img src="./img/aña 1.png" class="img-sec2">
+                    <h2>HORARIOS DE ATENCIÓN</h2>
+                    <p>Nuestros horarios de atencion, se ajustan a la comodida de nuestros clientes, por lo que abrimos desde las 7:00 a.m. a 22:00 p.m. de lunes a sabado</p>
+    
+                </article>
+                </div>
+    
+                <div class="div-sec2">
+                <article class="article-sec2">
+    
+                    <img src="./img/aña 2.png" class="img-sec2">
+                    <h2>DIRECCION DEL LOCAL</h2>
+                    <p>Nosotros nos encontramos en la ciudad de nuevo chimbote (Ancash-Santa). Especificamente en la Urbanizacion Paseo del Mar Manzana F5 Lote 7</p>
+    
+                </article>
+                </div>
+    
+                <div class="div-sec2">
+                <article class="article-sec2">
+    
+                    <img src="./img/aña 3.png" class="img-sec2">
+                    <h2>LA CULTURA ASIATICA</h2>
+                    <p>Nosotros decidimos optar por la cultura asiatica, para ofrecer productos de calidad y teniendo como referente a la cultura japonesa.</p>
+    
+                </article>
+                </div>
+    
+                <div class="div-sec2">
+                <article class="article-sec2">
+    
+                    <img src="./img/aña 4.png" class="img-sec2">
+                    <h2>PRODUCTOS A PEDIDO</h2>
+                    <p>Con nosotros podras pedir productos desde japon y te lo traeremos hasta la puerta de tu casa, con una orden anticipada.</p>
+    
+                </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="card-section">
+                <div class="card">
+                    <img src="./img/peluche.jpg" alt="">
+                    <div class="card-header">Peluches</div>
+                    <div class="card-body">
+                        <p>Descubre peluches adorables que llenarán tu vida de ternura y alegría. Nuestra colección te ofrece suavidad y encanto en cada abrazo. ¡Encuentra tu favorito en Flexvyne!</p>
+                        <a href="./pages/productos.html">ver mas</a>
+                    </div>
+                    <div class="card-footer"><img class="mini_masterball" src="./img/masterball.png" alt="masterball"></div>
+                </div>
+                <div class="card">
+                    <img src="./img/coleccionable.jpg" alt="">
+                    <div class="card-header">Coleccionables</div>
+                    <div class="card-body">
+                        <p>Explora figuras únicas y coleccionables que darán vida a tu pasión por lo excepcional. En Flexvyne, encontrarás tesoros que añadirán magia a tu colección.</p>
+                        <a href="./pages/productos.html">ver mas</a>
+                    </div>
+                    <div class="card-footer"><img class="mini_masterball" src="./img/masterball.png" alt="masterball"></div>
+                </div>
+                <div class="card">
+                    <img src="./img/funko.webp" alt="">
+                    <div class="card-header">Funko Pops</div>
+                    <div class="card-body">
+                        <p>Encuentra los Funko Pops más populares y deseados en Flexvyne. Estos coleccionables reflejan tu pasión por los personajes icónicos. ¡Haz que tu colección cobre vida!</p>
+                        <a href="./pages/productos.html">ver mas</a>
+                    </div>
+                    <div class="card-footer"><img class="mini_masterball" src="./img/masterball.png" alt="masterball"></div>
+                </div>
+                <div class="card">
+                    <img src="./img/polo.webp" alt="">
+                    <div class="card-header">Prendas</div>
+                    <div class="card-body">
+                        <p>Viste con estilo y muestra tu amor por el anime con nuestras prendas exclusivas. Flexvyne te ofrece una selección auténtica que reflejará tu pasión por el mundo del anime.</p>
+                        <a href="./pages/productos.html">ver mas</a>
+                    </div>
+                    <div class="card-footer"><img class="mini_masterball" src="./img/masterball.png" alt="masterball"></div>
+                </div>
+            </section>
+        </div>
+
+        <section class="sec3">
+            <h2 class="titulo-mejores">LOS PRODUCTOS MAS VENDIDOS DE LA SEMANA</h1>
+
+				<div class="container-options">
+					<span class="active">Funkopops</span>
+					<span>Peluches</span>
+					<span>Prendas</span>
+                    <span>Coleccionables</span>
+				</div>
+
+                
+        </section>
+
+        <section class="seccion_contacto">
+            <div class="container-form">
+                <div class="info-form">
+                    <h2>FLEXVYNE WEB CONTÁCTANOS</h2>
+                    <p>¿Tienes preguntas o comentarios? Estamos aquí para ayudarte. En Flexvyne, valoramos tu opinión y estamos listos para resolver tus inquietudes. No dudes en ponerte en contacto con nuestro equipo amigable. Estamos ansiosos por escuchar de ti y brindarte la mejor experiencia de compra. ¡Tu satisfacción es nuestra prioridad!
+                    </p>
+                    <a><i class="fa fa-phone"></i>+51 975544817</a>
+                    <a><i class="fa fa-envelope"></i>flexvyne_shop@gmail.com</a>
+                    <a><i class="fa fa-map-marked"></i>Nuevo Chimbote, Peru</a>
+                </div>
+                <form id="form" autocomplete="off" action="https://formspree.io/f/xqkvnvaw" method="POST">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" class="campo">
+                    <input type="emal" name="email" placeholder="Tu Email" class="campo">
+                    <textarea name="mensaje" placeholder="Tu Mensaje..."></textarea>
+                    <input type="submit" name="enviar" value="ENVIAR MENSAJE" class="btn-enviar">
+                </form>
+            </div>
+        </section>
+    </main>
+    <!--Aqui termina el main y contenido de la pagina-->
+
+    <!--Aqui comienza el footer-->
     <footer class="footer">
         <div class="footer-content">
             <h3>Flexvyne Web</h3>
@@ -49,7 +200,7 @@
 
     </footer>
 
-    <script src="./carrito.js"></script>
+    <script src="./javascript/formulario.js"></script>
+    <!--Aqui termina el footer-->
 </body>
 </html>
-

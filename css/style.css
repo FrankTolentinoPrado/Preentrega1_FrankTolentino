@@ -1,0 +1,888 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: black;
+  background-image: linear-gradient(to top, rgb(161, 237, 189) 0%, rgb(92, 29, 170) 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/*Aqui empieza el Header de Flexvyne*/
+header {
+    background: rgb(133, 133, 235);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+header .logo {
+    font-family: fantasy;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.logo{
+    color: aliceblue;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li a {
+  margin: 5px 0;
+    display: inline-block;
+    color: #ffffff;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.boton_login {
+    padding: 0.2rem 1rem;
+    background-color: rgb(92, 29, 170);
+    border-radius: 1.5rem;
+    transition: 0.4s ease-in, color 0.4s ease-in;
+}
+
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: dodgerblue;
+}
+
+.contenedor_hamburguesa {
+    background-color: rgb(133, 133, 235);
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #ffffff;
+}
+/*Aqui termina el Header de Flexvyne*/
+
+/*********************aqui comienza el main*********************/
+main {
+  flex-grow: 1;
+}
+
+.nosotros {
+  background-color: rgb(19, 19, 48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.nosotros span {
+  color: #687CEF;
+}
+
+.nosotros p {
+  font-size: 17px;
+  color: #D2D2D2;
+  margin-bottom: 35px;
+}
+
+.nosotros .btn-nosotros {
+  color: #ffffff;
+  font-family: fantasy;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 11px 35px;
+  background: linear-gradient(90deg, rgba(37, 118, 250, 1) 0%, rgba(84, 115, 237, 1) 100%);
+}
+
+.nosotros-img {
+  flex-basis: 50%;
+}
+
+.nosotros-img img {
+  margin-top: 20px;
+  margin-left: 165px;
+  width: 500px;
+  border-radius: 15px;
+}
+
+.nosotros-txt {
+  flex-basis: 50%;
+  margin-right: 160px;
+}
+
+.nosotros h2 {
+  font-size: 40px;
+  color: aliceblue;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/**************************************/
+/*       SECCIÓN 2 DE FLEXVYNE        */
+/**************************************/
+
+.sec2{
+  background-color: rgb(19, 19, 48);
+}
+
+.sec2 .subtitulo-sec2{
+  color: aliceblue;
+}
+
+.container-sec2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  padding: 0px 10px; 
+}
+
+.sec2 h2 {
+  padding: 30px;
+  font-family: fantasy;
+  letter-spacing: 1px;
+  color: rgba(37, 118, 250, 1);
+  text-align: center;
+}
+
+.subtitulo-sec2{
+  color: aliceblue;
+}
+
+.article-sec2 {
+  color: aliceblue;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: justify;
+  margin-top: 1rem;
+  margin: 30px 0; /
+}
+
+.article-sec2 p {
+  color: aliceblue;
+  align-items: center;
+  text-align: justify;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.img-sec2 {
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+/**************************************/
+/*       SECCIÓN 3 DE FLEXVYNE        */
+/**************************************/
+.sec3 {
+  background-color: rgb(19, 19, 48);
+  display: flex;
+  flex-direction: column;
+}
+
+.container-options {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Corrección: flex-direction a flex-wrap */
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container-options span {
+  color: #ffffff;
+  background-color: #7430d9;
+  padding: 0.7rem 1.5rem; /* Ajuste para hacerlo más responsivo */
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 0.5rem; /* Añadir un margen para mejorar la separación entre los elementos */
+}
+
+.container-options span:hover {
+  background-color: rgb(108, 206, 185);
+  color: #fff;
+}
+
+.container-options span.active {
+  background-color: rgb(108, 206, 185);
+  color: #fff;
+}
+
+.titulo-mejores {
+  margin-bottom: 10px;
+  color: #687CEF;
+  text-align: center; /* Eliminar "align-items" ya que no se aplica a un elemento de texto */
+}
+
+
+
+
+/*Aqui comienza el contenedor de las cards*/
+.container {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(19, 19, 48); 
+  color: aliceblue;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+.card-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+  justify-content: center;
+  background-color: rgb(129, 170, 157);
+  padding: 1.75rem;
+  border-radius: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.card img{
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.card .card-header {
+  text-align: center;
+  font-family: fantasy;
+  flex-basis: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.card .card-body {
+  flex-basis: 100%;
+  margin-top: 1.2rem;
+}
+
+.card .card-body p {
+  margin: 0;
+  text-align: justify;
+}
+
+.card .card-body a {
+  text-decoration: none;
+  margin-top: 10px;
+  color: aliceblue;
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  border: 1px solid transparent;
+  background-color: rgb(92, 29, 170);
+  border-radius: 1.75rem;
+  transition: 0.4s ease-in, color 0.4s ease-in;
+}
+
+.card .card-body a:hover {
+  background-color: transparent;
+  border-color: rgb(17, 15, 15);
+  color: rgb(8, 7, 7);
+}
+
+.card .card-footer {
+  flex-basis: 100%;
+  align-self: flex-end;
+  text-align: end;
+  font-size: 0.8rem;
+}
+
+.card-footer .mini_masterball {
+  width: 30px;
+  height: 30px;
+}
+/*Aqui termina el contenedor de las cards*/
+
+/*Contacto de Flexyne*/
+
+  .seccion_contacto{
+    background-color: rgb(19, 19, 48);
+  }
+
+  .container-form {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 15px; /* Añade un relleno a los lados para dispositivos móviles */
+  }
+  
+  .container-form h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #687CEF;
+    font-family: fantasy;
+    font-size: 28px; /* Reduce el tamaño del título para dispositivos móviles */
+  }
+  
+  .container-form p {
+    letter-spacing: 0.5px;
+    color: #dfdfdf;
+    font-family: fantasy;
+    text-align: justify;
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin-bottom: 20px;
+  }
+  
+  .container-form a {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: rgb(161, 237, 189);
+    font-weight: 700;
+  }
+  
+  .container-form a i {
+    color: rgb(92, 29, 170);
+    margin-right: 10px;
+  }
+  
+  .container-form form .campo, textarea {
+    width: 100%;
+    padding: 12px 10px; 
+    font-size: 14px; 
+    border: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    outline: 0;
+  }
+  
+  .container-form form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 120px; 
+    max-height: 140px;
+  }
+  
+  .container-form .btn-enviar {
+    font-family: fantasy;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    padding: 12px; 
+    font-size: 14px; 
+    border: none;
+    outline: 0;
+    background: rgb(92, 29, 170);
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  
+  .container-form .btn-enviar:hover {
+    background: rgb(92, 29, 170);
+  }
+  
+
+/*Aqui termina el apartado de contacto*/
+
+/***********************************************/
+/***************** productos********************/
+/***********************************************/
+
+.sec-productos{
+  justify-content: center;
+  align-items: center;
+}
+
+#productos {
+  max-width: 1400px;
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  align-items: center; /* Agregar esta línea para centrar verticalmente */
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#productos div {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center; /* Agregar esta línea para centrar el contenido dentro de los div */
+}
+
+#productos img {
+  display: block; /* Para eliminar espacio adicional en la parte inferior de la imagen */
+  margin: 0 auto; /* Para centrar horizontalmente */
+}
+
+#productos button {
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+
+.product {
+  margin-left: 40px;
+  margin-bottom: 15px;
+  width: 150px;
+  height: 150px;
+}
+
+#carrito {
+  width: 840px;
+  margin-top: 20px;
+  margin: auto;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-carrito li {
+  margin-bottom: 5px;
+}
+
+#total {
+  font-weight: bold;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.totalito {
+  background-color: rgb(153, 212, 212);
+  border-radius: 5px;
+}
+
+#carrito {
+  flex: 1;
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgb(92, 88, 193);
+  border-radius: 5px;
+}
+
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+}
+
+#lista-carrito li {
+  margin-bottom: 5px;
+}
+
+#total {
+  font-weight: bold;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.totalito {
+  background-color: rgb(153, 212, 212);
+  border-radius: 5px;
+}
+
+.carrito-titulo {
+  margin-top: 20px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.titulo-disponibles{
+  margin-top: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.historial-titulo {
+  font-size: 22px;
+  color: aquamarine;
+  margin-bottom: 30px;
+}
+
+#lista-carrito li button {
+  background-color: #ff4d4d;
+  color: white; 
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+#lista-carrito li button:hover {
+  background-color: #ff3333; 
+}
+
+/* Media query para estilos responsivos */
+@media (max-width: 768px) {
+  .carrito-titulo {
+    font-size: 20px; /* Cambia el tamaño de la fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+
+  .historial-titulo {
+    font-size: 18px; /* Cambia el tamaño de la fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+
+  #lista-carrito li button {
+    margin-left: 0; /* Elimina el margen izquierdo */
+  }
+}
+
+
+/*Aqui comienza el footer de Flexvyne*/
+footer {
+    background: #111;
+    height: auto;
+    width: 100%;
+    font-family: "Open Sans";
+    padding-top: 10px;
+    color: white;
+    flex-shrink: 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-content h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+  
+  .footer-content p {
+    max-width: 500px;
+    margin: 5px auto;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  
+  .socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 3rem 0;
+  }
+  
+  .socials li {
+    margin: 0 15px;
+  }
+  
+  .socials a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .socials a i {
+    font-size: 1.1rem;
+    transition: color 0.4s ease;
+  }
+  
+  .socials a:hover i {
+    color: aqua;
+  }
+  
+  .footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+  }
+  
+  .footer-bottom span {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 100;
+  }
+/*Aqui comienza el footer de Flexvyne*/
+
+/****************PAGINA DEL LOGIN****************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+.login-container {
+    height: 43.75em;
+    width: 60em;
+    margin: 6em auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    background-color: #674baf;
+}
+
+.image-container {
+    padding: 2rem;
+    width: 50%;
+    background-color: rgb(216, 240, 225);
+    box-sizing: border-box;
+}
+
+.title-login {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.social-login {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.social-login-element {
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-login-element img {
+    width: 1.875rem;
+    height: 1.875rem;
+    position: relative;
+    top: 0;
+    left: -0.625rem;
+}
+
+.social-login-element:hover {
+    background-color: rgb(161, 237, 189);
+}
+
+.login-info-container > p {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+}
+
+.inputs-container {
+    height: 55%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputs-container .input, .btn {
+    width: 90%;
+    height: 3.125rem;
+    font-size: 1em;
+}
+
+.inputs-container .input {
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.inputs-container .input:hover {
+    border: 2px solid white;
+}
+
+.inputs-container .btn {
+    width: 80%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(117, 210, 182);
+    cursor: pointer;
+}
+
+.inputs-container p {
+    margin: 0;
+}
+
+.inputs-container .span {
+    color: rgb(161, 237, 189);
+    font-weight: 600;
+    cursor: pointer;
+}
+/*Aqui termina el contenido del login*/
+
+
+/************************Aqui empieza el apartado de medias***************************/
+
+/*Aquie empieza la media para el header*/
+@media only screen and (max-width: 1250px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
+/*Aqui termina la media para el header*/
+
+/*Aqui empieza el apartado de la media para el contenido de nosotros*/
+@media (max-width: 1300px) {
+  .nosotros {
+    flex-direction: column; /* Cambiar a dirección de columna */
+  }
+
+  .nosotros-img,
+  .nosotros-txt {
+    flex-basis: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    margin: 0;
+    text-align: center;
+  }
+
+  .nosotros-img img {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+    margin: 0;
+    margin-top: 20px;
+      display: none;
+  }
+}
+
+/*Aqui termina la media para nosotros*/
+
+/*Aqui comienza el apartado del login*/
+@media screen and (max-width: 1000px) {
+  .login-container {
+      width: 70%;
+      margin-top: 3rem;
+  }
+  .login-info-container {
+      width: 100%;
+      border-radius: 5px;
+  }
+  
+  .image-container {
+      display: none;
+  }  
+}
+
+@media screen and (max-width: 650px) {
+  .login-container {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login-container {
+      height: 90%;
+  }
+
+  .social-login {
+      flex-direction: column;
+      align-items: center;
+      height: 30%;
+  }
+
+  .login-info-container > p {
+      margin: 0;
+  }
+}
+/*Aqui terminar el apartado del login*/
