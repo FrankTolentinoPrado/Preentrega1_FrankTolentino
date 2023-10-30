@@ -38,12 +38,20 @@
     </header>
     
     <main class="main">
-
+        
+        
         <section class="sec-productos">
 
-        <h2 class="carrito-titulo">Carrito de compras</h2>
+        <div class="orden-productos">
+        <div class="categorias-productos">
+        <h2 class="titulo-orden">CATEGORIAS  PRODUCTOS</h2>
+            <button id="btnMayorPrecio">Mayor precio</button>
+            <button id="btnMenorPrecio">Menor precio</button>
+            <button id="btnMasRelevante">Más relevante</button>
+            <button id="btnLimpiarFiltros">Limpiar filtros</button>
+        </div>
         <div id="carrito">
-            <h2 class="historial-titulo">Historial de compras y productos</h2>
+            <h2 class="historial-titulo">CARRITO DE COMPRAS</h2>
             <ul id="lista-carrito">
                 
             </ul>
@@ -51,13 +59,14 @@
                 <p>Total: $<span id="total">0</span></p>
             </div>
         </div>
-
-        <h2 class="titulo-disponibles">Productos disponibles:</h2>
-
-        <div id="productos">
-        
         </div>
-    </section>
+
+        <div class="container-productos">
+        <h2 class="titulo-disponibles">PRODUCTOS DISPONIBLES</h2>
+        <div id="productos">
+        </div>
+        </div>
+        </section>
 
     
     </main>

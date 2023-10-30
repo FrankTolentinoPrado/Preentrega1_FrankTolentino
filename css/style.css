@@ -225,12 +225,12 @@ main {
 .container-options span {
   color: #ffffff;
   background-color: #7430d9;
-  padding: 0.7rem 1.5rem; /* Ajuste para hacerlo más responsivo */
+  padding: 0.7rem 1.5rem; 
   font-size: 1.4rem;
   text-transform: capitalize;
   border-radius: 2rem;
   cursor: pointer;
-  margin: 0.5rem; /* Añadir un margen para mejorar la separación entre los elementos */
+  margin: 0.5rem; 
 }
 
 .container-options span:hover {
@@ -246,7 +246,7 @@ main {
 .titulo-mejores {
   margin-bottom: 10px;
   color: #687CEF;
-  text-align: center; /* Eliminar "align-items" ya que no se aplica a un elemento de texto */
+  text-align: center; 
 }
 
 
@@ -353,7 +353,7 @@ main {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 15px; /* Añade un relleno a los lados para dispositivos móviles */
+    padding: 0 15px;
   }
   
   .container-form h2 {
@@ -363,7 +363,7 @@ main {
     margin-bottom: 15px;
     color: #687CEF;
     font-family: fantasy;
-    font-size: 28px; /* Reduce el tamaño del título para dispositivos móviles */
+    font-size: 28px; 
   }
   
   .container-form p {
@@ -435,41 +435,77 @@ main {
 /***************** productos********************/
 /***********************************************/
 
-.sec-productos{
-  justify-content: center;
-  align-items: center;
+/* Estilo para los botones de orden y limpiar filtros */
+
+.categorias-productos button {
+  background-color: rgb(115, 0, 255);
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-left: 2.5%;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 95%; 
+  text-align: center; 
+}
+
+.categorias-productos button:hover {
+  background-color: rgb(155, 223, 192);
+}
+
+/* Estilo para los productos */
+.sec-productos {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.orden-productos {
+  width: 30%;
+  background-color: rgb(206, 255, 217);
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.container-productos{
+  width: 80%;
 }
 
 #productos {
-  max-width: 1400px;
   display: grid;
   gap: 1.75rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   justify-content: center;
-  align-items: center; /* Agregar esta línea para centrar verticalmente */
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 20px;
-  margin-left: 20px;
+  border-radius: 5px;
 }
 
 #productos div {
   background-color: white;
   padding: 10px;
   border-radius: 5px;
-  text-align: center; /* Agregar esta línea para centrar el contenido dentro de los div */
+  text-align: center; 
 }
 
 #productos img {
-  display: block; /* Para eliminar espacio adicional en la parte inferior de la imagen */
-  margin: 0 auto; /* Para centrar horizontalmente */
+  display: block; 
+  margin: 0 auto; 
 }
 
 #productos button {
   background-color: aquamarine;
   color: white;
   border: none;
+  border-radius: 5px;
   padding: 5px 5px;
   cursor: pointer;
 }
@@ -482,37 +518,9 @@ main {
 }
 
 #carrito {
-  width: 840px;
-  margin-top: 20px;
-  margin: auto;
-  background-color: aliceblue;
-  border-radius: 5px;
-}
-
-#lista-carrito {
-  list-style: none;
-  padding: 0;
-}
-
-#lista-carrito li {
-  margin-bottom: 5px;
-}
-
-#total {
-  font-weight: bold;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.totalito {
-  background-color: rgb(153, 212, 212);
-  border-radius: 5px;
-}
-
-#carrito {
-  flex: 1;
-  width: 100%;
-  margin-top: 20px;
+  margin-top: 100px;
+  width: 95%;
+  margin-left: 2.5%;
   background-color: rgb(92, 88, 193);
   border-radius: 5px;
 }
@@ -533,24 +541,29 @@ main {
 }
 
 .totalito {
-  background-color: rgb(153, 212, 212);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
 }
 
-.carrito-titulo {
-  margin-top: 20px;
-  font-size: 30px;
+.titulo-disponibles{
+  text-align: center;
   color: rgb(255, 255, 255);
+  font-family: fantasy;
+  letter-spacing: 2px;
+  font-size: 25px;
+  margin-top: 20px;
 }
 
-.titulo-disponibles{
-  margin-top: 20px;
+.titulo-orden{
   text-align: center;
-  color: #ffffff;
-  font-size: 30px;
+  color: rgb(90, 32, 190);
+  font-family: fantasy;
+  letter-spacing: 2px;
+  margin-top: 10px;
 }
 
 .historial-titulo {
+  text-align: center;
   font-size: 22px;
   color: aquamarine;
   margin-bottom: 30px;
@@ -574,17 +587,17 @@ main {
 /* Media query para estilos responsivos */
 @media (max-width: 768px) {
   .carrito-titulo {
-    font-size: 20px; /* Cambia el tamaño de la fuente */
-    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 20px; 
+    text-align: center; 
   }
 
   .historial-titulo {
-    font-size: 18px; /* Cambia el tamaño de la fuente */
-    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 18px; 
+    text-align: center; 
   }
 
   #lista-carrito li button {
-    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-left: 0; 
   }
 }
 
@@ -828,18 +841,18 @@ footer {
 /*Aqui empieza el apartado de la media para el contenido de nosotros*/
 @media (max-width: 1300px) {
   .nosotros {
-    flex-direction: column; /* Cambiar a dirección de columna */
+    flex-direction: column; 
   }
 
   .nosotros-img,
   .nosotros-txt {
-    flex-basis: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    flex-basis: 100%; 
     margin: 0;
     text-align: center;
   }
 
   .nosotros-img img {
-    width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+    width: 100%; 
     margin: 0;
     margin-top: 20px;
       display: none;
@@ -847,6 +860,29 @@ footer {
 }
 
 /*Aqui termina la media para nosotros*/
+
+/*Aqui comienza el apartado para mi pagina productos*/
+
+@media (max-width: 768px) {
+  .sec-productos {
+    flex-direction: column; 
+  }
+
+  #carrito {
+    width: 100%; 
+    margin: 20px 0; 
+  }
+
+  .orden-productos {
+    width: 100%; 
+    margin: 20px 0; 
+  }
+
+  .container-productos {
+    width: 100%; 
+    margin: 20px 0; 
+  }
+}
 
 /*Aqui comienza el apartado del login*/
 @media screen and (max-width: 1000px) {

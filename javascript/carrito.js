@@ -9,16 +9,16 @@ let productos = [
     { nombre: 'Polo 3', precio: 65, imagen: '../img/poloanime3.webp' },
     { nombre: 'Polo 4', precio: 80, imagen: '../img/poloanime 4.webp' },
     { nombre: 'Polo 5', precio: 50, imagen: '../img/poloanime5.webp' },
-    { nombre: 'Funkpop 1', precio: 65, imagen: '../img/coleccionable1.webp' },
-    { nombre: 'Funkpop 2', precio: 56, imagen: '../img/coleccionable2.webp' },
-    { nombre: 'Funkpop 3', precio: 84, imagen: '../img/coleccionable3.webp' },
-    { nombre: 'Funkpop 4', precio: 75, imagen: '../img/coleccionable4.webp' },
-    { nombre: 'Funkpop 5', precio: 90, imagen: '../img/coleccionable5.webp' },
-    { nombre: 'Funkpop 1', precio: 65, imagen: '../img/peluche1.jpeg' },
-    { nombre: 'Funkpop 2', precio: 56, imagen: '../img/peluche2.webp' },
-    { nombre: 'Funkpop 3', precio: 84, imagen: '../img/peluche3.webp' },
-    { nombre: 'Funkpop 4', precio: 75, imagen: '../img/peluche4.jpg' },
-    { nombre: 'Funkpop 5', precio: 90, imagen: '../img/peluche5.jpeg' }
+    { nombre: 'Coleccionable 1', precio: 65, imagen: '../img/coleccionable1.webp' },
+    { nombre: 'Coleccionable 2', precio: 56, imagen: '../img/coleccionable2.webp' },
+    { nombre: 'Coleccionable 3', precio: 84, imagen: '../img/coleccionable3.webp' },
+    { nombre: 'Coleccionable 4', precio: 75, imagen: '../img/coleccionable4.webp' },
+    { nombre: 'Coleccionable 5', precio: 90, imagen: '../img/coleccionable5.webp' },
+    { nombre: 'Peluche 1', precio: 65, imagen: '../img/peluche1.jpeg' },
+    { nombre: 'Peluche 2', precio: 56, imagen: '../img/peluche2.webp' },
+    { nombre: 'Peluche 3', precio: 84, imagen: '../img/peluche3.webp' },
+    { nombre: 'Peluche 4', precio: 75, imagen: '../img/peluche4.jpg' },
+    { nombre: 'Peluche 5', precio: 90, imagen: '../img/peluche5.jpeg' }
 ];
 
 let carrito = [];
@@ -110,3 +110,57 @@ agregarButtons.forEach(button => {
         agregarProducto(index, cantidad);
     });
 });
+
+// Botón "Mayor precio"
+document.getElementById("btnMayorPrecio").addEventListener("click", () => {
+    productos.sort((a, b) => b.precio - a.precio);
+    mostrarProductos();
+});
+
+// Botón "Menor precio"
+document.getElementById("btnMenorPrecio").addEventListener("click", () => {
+    productos.sort((a, b) => a.precio - b.precio);
+    mostrarProductos();
+});
+
+// Botón "Más relevante"
+document.getElementById("btnMasRelevante").addEventListener("click", () => {
+    productos.sort((a, b) => a.precio - b.precio);
+    mostrarProductos();
+});
+
+// Botón "Limpiar filtros"
+document.getElementById("btnLimpiarFiltros").addEventListener("click", () => {
+    productos = productosOriginal.slice(); // Restaura la lista original de productos
+    mostrarProductos();
+});
+
+const productosOriginal = productos.slice(); // Copia la lista original de productos
+
+function mostrarProductos() {
+    const productosContainer = document.getElementById("productos");
+    productosContainer.innerHTML = "";
+
+    productos.forEach((producto, index) => {
+        const div = document.createElement("div");
+        div.innerHTML = `
+            <div class="product"><img class="product" src="${producto.imagen}" alt="${producto.nombre}"></div>
+            <span>${producto.nombre} - S/.${producto.precio}</span>
+            <div>
+                <input type="number" min="1" value="1" id="cantidad-${index}" />
+            </div>
+            <button class="agregar-button" data-index="${index}">Agregar al carrito</button>
+        `;
+
+        productosContainer.appendChild(div);
+    });
+
+    const agregarButtons = document.querySelectorAll(".agregar-button");
+    agregarButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const index = button.getAttribute("data-index");
+            const cantidad = document.getElementById(`cantidad-${index}`).value;
+            agregarProducto(index, cantidad);
+        });
+    });
+}
