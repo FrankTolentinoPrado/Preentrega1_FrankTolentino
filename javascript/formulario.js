@@ -15,5 +15,14 @@ async function handlesubmit(event) {
     }) 
     if (response.ok)
     this.reset()
-    alert('Gracias por contactarme, te escribiré pronto')
+
+    Swal.fire({
+        title: 'Gracias por contactarme, te escribiré pronto',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
 }    
