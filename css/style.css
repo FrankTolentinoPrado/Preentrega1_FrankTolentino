@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -216,7 +215,7 @@ main {
 .container-options {
   margin-top: 10px;
   display: flex;
-  flex-wrap: wrap; /* Corrección: flex-direction a flex-wrap */
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1rem;
@@ -249,7 +248,72 @@ main {
   text-align: center; 
 }
 
+/*Aqui empieza lo mas popular*/
+.populares_vendidos {
+  padding: 2rem;
+  padding-top: 0;
+  background-color: rgb(107, 42, 193);
+}
 
+.titulos-poke h4 {
+  color: white;
+}
+
+.titulos-poke{
+  padding: 10px;
+  margin-bottom: 20px;
+  padding-inline: 2rem;
+  text-align: center;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 25px;
+  color: white;
+}
+
+.cartas-poke {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.carta-poke {
+  flex-basis: calc(22% - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.carta-poke img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.carta-poke h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: white;
+}
+.carta-poke p {
+  font-family: "Lato", sans-serif;
+  width: 75%;
+  text-align: center;
+  color: white;
+}
+.carta-poke a {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 1rem;
+  background-color: #af3939;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+.carta-poke .boton-rojo {
+  border-radius: 5px;
+}
+/*Aqui termina lo popular*/
 
 
 /*Aqui comienza el contenedor de las cards*/
@@ -662,7 +726,6 @@ footer {
 /*Aqui comienza el footer de Flexvyne*/
 
 /****************PAGINA DEL LOGIN****************/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 .login-container {
     height: 43.75em;
     width: 60em;
@@ -691,6 +754,7 @@ footer {
 }
 
 .title-login {
+  margin-bottom: 20px;
     text-transform: capitalize;
     font-size: 2.25rem;
     font-weight: 600;

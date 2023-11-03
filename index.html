@@ -149,13 +149,20 @@
             <h2 class="titulo-mejores">LOS PRODUCTOS MAS VENDIDOS DE LA SEMANA</h1>
 
 				<div class="container-options">
-					<span class="active">Funkopops</span>
-					<span>Peluches</span>
-					<span>Prendas</span>
-                    <span>Coleccionables</span>
-				</div>
+                    <span class="active" data-category="funkopops">Funkopops</span>
+                    <span data-category="peluches">Peluches</span>
+                    <span data-category="prendas">Prendas</span>
+                    <span data-category="coleccionables">Coleccionables</span>
+                </div>
+        </section>
 
-                
+        <section class="populares_vendidos">
+            <div class="titulos-poke">
+                <p>¡Este es nuestro top 3 de la semana, no te quedes con las ganas y aprovecha en comprar todas las que quieras!</p>
+            </div>
+            <div class="cartas-poke" id="favorito-carousel" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <!-- Aquí se generará y recorrerá el contenido de las tarjetas de producto mediante JavaScript -->
+            </div>
         </section>
 
         <section class="seccion_contacto">
@@ -201,6 +208,7 @@
     </footer>
 
     <script src="./javascript/formulario.js"></script>
+    <script src="./javascript/carrusel.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--Aqui termina el footer-->
 </body>
