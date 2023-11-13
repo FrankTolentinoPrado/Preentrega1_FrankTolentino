@@ -157,7 +157,7 @@ main {
 
 .container-sec2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2rem;
   margin-left: auto;
   margin-right: auto;
@@ -264,7 +264,6 @@ main {
   margin-bottom: 20px;
   padding-inline: 2rem;
   text-align: center;
-  font-family: "Alfa Slab One", cursive;
   font-size: 25px;
   color: white;
 }

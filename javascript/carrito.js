@@ -1,3 +1,4 @@
+// script.js
 let productos = [
     { nombre: 'Funkpop 1', precio: 65, imagen: '../img/piplup.jpeg' },
     { nombre: 'Funkpop 2', precio: 50, imagen: '../img/mushi.webp' },
@@ -75,7 +76,7 @@ function actualizarCarrito() {
     carrito.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = `${item.producto.nombre} - Cantidad: ${item.cantidad} - Subtotal: $${item.subtotal.toFixed(2)}`;
-        
+
         const eliminarButton = document.createElement('button');
         eliminarButton.textContent = "Eliminar";
         eliminarButton.addEventListener("click", () => {
@@ -95,7 +96,7 @@ for (let i = 0; i < productos.length; i++) {
         <div class="product"><img class="product" src="${productos[i].imagen}" alt="${productos[i].nombre}"></div>
         <span>${productos[i].nombre} - S/.${productos[i].precio}</span>
         <div>
-        <input type="number" min="1" value="1" id="cantidad-${i}" />
+            <input type="number" min="1" value="1" id="cantidad-${i}" />
         </div>
         <button class="agregar-button" data-index="${i}">Agregar al carrito</button>
     `;
@@ -111,22 +112,18 @@ agregarButtons.forEach(button => {
     });
 });
 
-// Botón "Mayor precio"
 document.getElementById("btnMayorPrecio").addEventListener("click", () => {
     productos.sort((a, b) => b.precio - a.precio);
     mostrarProductos();
 });
 
-// Botón "Menor precio"
 document.getElementById("btnMenorPrecio").addEventListener("click", () => {
     productos.sort((a, b) => a.precio - b.precio);
     mostrarProductos();
 });
 
-// Botón "Más relevante"
 document.getElementById("btnMasRelevante").addEventListener("click", () => {
     productos.sort((a, b) => {
-
         const diffA = Math.abs(a.precio - 65);
         const diffB = Math.abs(b.precio - 65);
 
@@ -135,13 +132,10 @@ document.getElementById("btnMasRelevante").addEventListener("click", () => {
         }
         if (diffA > diffB) {
             return 1;
-
         } else if (a.precio < b.precio) {
             return -1;
-
         } else if (a.precio > b.precio) {
             return 1;
-
         } else {
             return a.nombre.localeCompare(b.nombre);
         }
@@ -149,13 +143,12 @@ document.getElementById("btnMasRelevante").addEventListener("click", () => {
     mostrarProductos();
 });
 
-// Botón "Limpiar filtros"
 document.getElementById("btnLimpiarFiltros").addEventListener("click", () => {
-    productos = productosOriginal.slice(); 
+    productos = productosOriginal.slice();
     mostrarProductos();
 });
 
-const productosOriginal = productos.slice(); 
+const productosOriginal = productos.slice();
 
 function mostrarProductos() {
     const productosContainer = document.getElementById("productos");
@@ -184,3 +177,4 @@ function mostrarProductos() {
         });
     });
 }
+
